@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Flask Demo</title>
-        <link href="/static/css/page.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/page.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body>
-        <img src="/static/img/smile.jpg" />
+        <img src="{{ url_for('static', filename='img/smile.jpg') }}" />
         <h1>Smile</h1>
     </body>
 </html>
